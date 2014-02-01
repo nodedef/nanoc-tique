@@ -1,0 +1,15 @@
+compile '*' do
+  if item.binary?
+    # don’t filter binary items
+  elsif item[:extension] == "html"
+    filter :erb
+    filter :search
+    layout 'default'
+  else
+    filter :erb
+    filter :redcarpet, options: DevDocs::Markdown::OPTIONS, renderer: DevDocs::Markdown::HTMLPygments
+    filter :search
+    
+    layout 'default'
+  end
+end

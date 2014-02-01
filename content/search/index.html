@@ -1,0 +1,27 @@
+---
+title: Search
+---
+<script>
+var tipuesearch_stop_words = [];
+var tipuesearch_replace = { words: [] };
+var tipuesearch_stem = tipuesearch_replace;
+</script>
+<link href="/assets/js/tipuesearch.css" rel="stylesheet">
+<script src="/assets/js/tipuesearch_set.js"></script>
+<script src="/assets/js/tipuesearch_content.js"></script>
+<script src="/assets/js/tipuesearch.js"></script>
+
+
+<article>
+<div style="float: left;"><input type="text" id="tipue_search_input"></div>
+<div style="float: left; margin-left: 13px;"><input type="button" id="tipue_search_button"></div>
+<div id="tipue_search_content"></div>
+
+
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({'mode': 'live'});
+});
+</script>
+
+</article>
