@@ -8,7 +8,7 @@ option :o, :out, 'output directory', argument: :optional
 option :t, :type, 'type of index', argument: :optional
 
 run do |opts, args, cmd|
-  output_dir = opts[:o] || 'static/assets/js'
+  output_dir = opts[:o] || 'output/assets/js'
   puts "Using #{output_dir} directory for index!"
 
   type = opts[:t] || 'live'
